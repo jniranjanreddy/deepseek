@@ -55,3 +55,21 @@ if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)
 
 ```
+## python3 proxy.py
+
+```
+systemd file for fastapi
+[fastapi]$ sudo cat /etc/systemd/system/fastapi.service
+[Unit]
+Description=FastAPI Application
+After=network.target
+
+[Service]
+WorkingDirectory=/root/fastapi-expose
+ExecStart=/bin/python3 /root/fastapi-expose/proxy.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
