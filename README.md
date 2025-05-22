@@ -21,7 +21,8 @@ OLLAMA_URL = "http://10.0.112.15:8080/api/generate"
 
 # Define the request payload
 payload = {
-    "model": "deepseek-r1",
+    #"model": "deepseek-r1",
+    "model": "llama4:scout",
     "prompt": "What is AI?",
     "stream": False  # Set to True for streaming responses
 }
